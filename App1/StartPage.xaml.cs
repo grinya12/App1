@@ -12,8 +12,8 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
-        List<ContentPage> pages = new List<ContentPage>() { new Entry_Page(), new Timer_Page(), new BoxView_Page() }; // index= 0,1,2,...
-        List<string> tekstid = new List<string> { "Ava teksti leht", "Ava timer leht", "Ava box leht" };
+        List<ContentPage> pages = new List<ContentPage>() { new Entry_Page(), new Timer_Page(), new BoxView_Page(), new DateTime_Page(), new StepperSlider_Page() }; // index= 0,1,2,...
+        List<string> tekstid = new List<string> { "Ava teksti leht", "Ava timer leht", "Ava box leht", "Ava date leht", "Ava stepper leht" };
         public StartPage()
         {
             StackLayout st = new StackLayout
