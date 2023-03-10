@@ -46,7 +46,7 @@ namespace App1
            
             if (box.WidthRequest > 200)
             {
-                box.WidthRequest = 200;
+                box.WidthRequest = 100;
                 box.HeightRequest= 200;
             }
         }
