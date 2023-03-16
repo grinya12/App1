@@ -52,6 +52,7 @@ namespace App1
                 CornerRadius = 20,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
+
             StackLayout st = new StackLayout
             {
                 Children = { lbl, fr }

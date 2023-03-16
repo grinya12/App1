@@ -12,14 +12,14 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
-        List<ContentPage> pages = new List<ContentPage>() { new Entry_Page(), new Timer_Page(), new BoxView_Page(), new DateTime_Page(), new StepperSlider_Page() }; // index= 0,1,2,...
-        List<string> tekstid = new List<string> { "Ava teksti leht", "Ava timer leht", "Ava box leht", "Ava date leht", "Ava stepper leht" };
+        List<ContentPage> pages = new List<ContentPage>() { new Entry_Page(), new Timer_Page(), new BoxView_Page(), new DateTime_Page(), new StepperSlider_Page(), new Frame_Page(), new Image_Page()}; // index= 0,1,2,...
+        List<string> tekstid = new List<string> { "Ava teksti leht", "Ava timer leht", "Ava box leht", "Ava date leht", "Ava stepper leht", "Ava frame leht", "Ava image leht"};
         public StartPage()
         {
             StackLayout st = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
-                BackgroundColor = Color.Yellow
+                BackgroundColor = Color.Aqua
             };
 
             //Button Entry_btn = new Button
@@ -50,8 +50,8 @@ namespace App1
                 {
                     Text= tekstid[i],
                     TabIndex= i,
-                    BackgroundColor= Color.Violet,
-                    TextColor= Color.Tomato
+                    BackgroundColor= Color.Fuchsia,
+                    TextColor= Color.Black
                 };
                 st.Children.Add(button);
                 button.Clicked += Navig_funktsion;

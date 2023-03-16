@@ -15,28 +15,30 @@ namespace App1
         Label lbl;
         DatePicker dp;
         TimePicker tp;
+
         public DateTime_Page()
         {
-            //InitializeComponent();
             lbl= new Label
             {
                 Text ="Vali mingi kuupäev",
-                BackgroundColor= Color.BurlyWood,
+                BackgroundColor= Color.BurlyWood
             };
+
             dp = new DatePicker 
             {
                 Format="D",
                 MinimumDate= DateTime.Now.AddDays(-5),
                 MaximumDate= DateTime.Now.AddDays(5),
-                TextColor= Color.Red,
+                TextColor= Color.Red
             };
+
             dp.DateSelected += Dp_DateSelected;
             tp = new TimePicker 
             {
                 Time=new TimeSpan(12,0,0)
             };
-            tp.PropertyChanged += Tp_PropertyChanged;
 
+            tp.PropertyChanged += Tp_PropertyChanged;
             AbsoluteLayout abs = new AbsoluteLayout
             {
                 Children = { lbl, dp, tp }
@@ -47,9 +49,9 @@ namespace App1
             AbsoluteLayout.SetLayoutFlags(dp, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(tp, new Rectangle(0.5, 0.7, 300, 50));
             AbsoluteLayout.SetLayoutFlags(tp, AbsoluteLayoutFlags.PositionProportional);
+            Content = abs;
         }
     
-
 
         private void Tp_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
